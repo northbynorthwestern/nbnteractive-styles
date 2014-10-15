@@ -1,5 +1,10 @@
+// Responsive-design Breakpoints
+$default-768: new-breakpoint(min-width 768px);
+$default-480: new-breakpoint(max-width 480px);
+
+$small: new-breakpoint(max-width 15em);
+$medium: new-breakpoint(max-width 45em);
+$large: new-breakpoint(min-width 50em);
+
 // size of lead art banner on apps/explorers
 $banner-height: 225px;
-
-// url to background-image on banner
-$grand-header-image-url: '';
