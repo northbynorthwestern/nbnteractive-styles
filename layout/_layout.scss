@@ -1,0 +1,5 @@
+.container {
+  @include media($small) { padding: 0 .5em; }
+  @include media($medium) { padding: 0 1em; }
+  @include media($large) { padding: 0 1.5em; }
+}
