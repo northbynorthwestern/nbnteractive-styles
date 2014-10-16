@@ -3,3 +3,14 @@
   @include media($medium) { padding: 0 1em; }
   @include media($large) { padding: 0 1.5em; }
 }
+
+.content-block {
+  @include media($large) {
+    @include span-columns(10 of 12);
+    @include shift(1);
+  }
+  @include media($medium) {
+    @include span-columns(10 of 12);
+    @include shift(1);
+  }
+}

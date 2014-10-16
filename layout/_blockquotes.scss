@@ -1,0 +1,83 @@
+
+
+.highlight {
+  @include highlight;
+}
+
+@mixin centerBlockquote {
+  @include fill-parent;
+  @include highlight;
+  text-align: left !important;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-left: 0em !important;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+
+q {
+  display: block;
+  @include serif;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-weight: bold;
+  font-size: 1.1em;
+
+  &.left {
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 1em;
+      text-align: left;
+
+      @include media($large) {
+          @include span-columns(4 of 12);
+          @include shift(-1);
+      }
+      @include media($medium) {
+          @include span-columns(3 of 12);
+          @include shift(-1);
+      }
+      @include media($small) {
+          margin-left: 0 !important;
+          @include centerBlockquote;
+      }
+  }
+
+  &.right {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 1em;
+      text-align: right;
+
+      @include media($large) {
+          @include row($direction: RTL);
+          @include span-columns(4 of 12);
+          @include shift(-1);
+      }
+      @include media($medium) {
+          @include row($direction: RTL);
+          @include span-columns(3 of 12);
+          @include shift(-1);
+      }
+      @include media($small) {
+          @include row($direction: LTR);
+          @include centerBlockquote;
+      }
+  }
+
+  &.center {
+      @include centerBlockquote;
+  }
+
+  &:before, &:after {
+      font-size: 2em;
+      content: none;
+  }
+  p {
+      margin: 0;
+      font-size: 1.2em;
+      display: inline;
+  }
+}
