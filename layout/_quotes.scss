@@ -4,7 +4,6 @@
 
 @mixin centerBlockquote {
   @include fill-parent;
-  @include highlight;
   text-align: left !important;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
