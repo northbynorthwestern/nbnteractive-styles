@@ -1,3 +1,7 @@
 .prose {
-  @include serif;
+  @include sans-serif;
+  p {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
 }
