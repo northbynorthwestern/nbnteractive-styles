@@ -7,4 +7,10 @@
 @import 'helpers/functions';
 @import 'helpers/mixins';
 
-@import 'layout';
+@import 'layout/layout';
+@import 'layout/banner';
+@import 'layout/footer';
+@import 'layout/images';
+@import 'layout/masthead';
+@import 'layout/prose';
+@import 'layout/quotes';
