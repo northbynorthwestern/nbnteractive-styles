@@ -1,14 +1,15 @@
 .masthead {
   background-color: $masthead-purple;
+  padding: .5em 0 .375em;
+  text-align: center;
   width: 100%;
 
-  .branding {
-    padding: .75em 0 .375em;
-    text-align: center;
-    width: 100%;
+  @include media($large) {
+    text-align: left;
+    padding-left: .5em;
+  }
 
-    .nbn-logo {
-      height: 1.5em;
-    }
+  .nbn-logo {
+    height: 1.5em;
   }
 }
