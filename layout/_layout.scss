@@ -19,6 +19,7 @@
 
   figure,
   img,
+  q,
   div {
 
     .xl { @include span-columns(12); }
@@ -42,11 +43,16 @@
       }
     }
 
-    @include media($small) {
-      @include fill-parent();
-      @include span-columns(12 of 12);
-      margin-left: auto;
-      margin-right: auto;
+    .xl,
+    .large,
+    .medium,
+    .small {
+      @include media($small) {
+        @include fill-parent();
+        @include span-columns(12 of 12);
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &.left {
