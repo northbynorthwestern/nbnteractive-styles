@@ -1,5 +1,5 @@
-@mixin sans-serif { font-family: "Proxima-Nova", Helvetica, sans-serif; }
-@mixin serif { font-family: "ff-meta-serif-web-pro", Georgia, serif; }
+@mixin sans-serif { $sans-serif; }
+@mixin serif { $serif; }
 
 @mixin highlight {
   background-color: $nbn-red;
