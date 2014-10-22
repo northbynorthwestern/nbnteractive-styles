@@ -7,10 +7,10 @@ $quote-small: new-breakpoint(max-width em(700px));
 @mixin center-blockquote {
   @include fill-parent;
   text-align: left !important;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
+  // -webkit-margin-before: 0;
+  // -webkit-margin-after: 0;
+  // -webkit-margin-start: 0;
+  // -webkit-margin-end: 0;
   margin-left: 0 !important;
 }
 
