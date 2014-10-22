@@ -11,3 +11,7 @@ $banner-height: 225px;
 
 $sans-serif: "Proxima-Nova", Helvetica, sans-serif;
 $serif: "ff-meta-serif-web-pro", Georgia, serif;
+
+
+// Layout Breakpoints
+$medium-to-small: new-breakpoint(max-width em(650px));

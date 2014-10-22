@@ -16,59 +16,66 @@
   @include media($small) {
     @include span-columns(12 of 12);
   }
+}
 
-  // figure,
-  // img,
-  // q,
-  // div {
 
-  //   .xl { @include span-columns(12); }
-  //   .large { @include span-columns(8); }
-  //   .medium { @include span-columns(6); }
-  //   .small { @include span-columns(4); }
+// This stuff is important
+.prose {
 
-  //   .xl,
-  //   .large {
-  //     @include media($medium) {
-  //       @include fill-parent;
-  //       margin-left: auto;
-  //       margin-right: auto;
-  //     }
-  //   }
+  img,
+  figure,
+  div,
+  ul,
+  ol,
+  q {
 
-  //   .medium,
-  //   .small {
-  //     @include media($medium) {
-  //       @include shift(0);
-  //     }
-  //   }
+    margin-top: 1em;
+    margin-bottom: 1em;
 
-  //   .xl,
-  //   .large,
-  //   .medium,
-  //   .small {
-  //     @include media($small) {
-  //       @include fill-parent();
-  //       @include span-columns(12 of 12);
-  //       margin-left: auto;
-  //       margin-right: auto;
-  //     }
-  //   }
+    @include left-right-layouts;
 
-  //   &.left {
-  //     @include shift(-2);
-  //     margin-right: 2em;
-  //   }
+    @include direction-context(left-to-right) {
+      &.left {
+        @include left-right-layouts();
+        margin-right: 1.5em;
+        padding-right: 1.5em;
+        text-align: left;
+      }
+    }
 
-  //   &.right {
-  //     @include row($direction: RTL);
-  //     @include shift(-2);
-  //     margin-left: 1.25em;
-  //   }
 
-  //   &.center {
-  //     margin-left: auto;
-  //     margin-right: auto;
-  //   }
-  // }
+    @include direction-context(right-to-left) {
+      &.right {
+        @include left-right-layouts();
+        margin-left: 1.5em;
+        padding-left: 1.5em;
+        text-align: right;
+      }
+    }
+
+    &.left,
+    &.right {
+      @include media($medium-to-small) {
+        margin-left: 0;
+        margin-right: 0;
+
+      }
+
+      @include media($small) {
+        text-align: left;
+        padding-left: 0;
+      }
+    }
+
+    &.center {
+      @include shift(0);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+  }
+
+  q {
+    @extend .medium;
+  }
 }

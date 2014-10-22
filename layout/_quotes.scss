@@ -1,18 +1,8 @@
-$quote-small: new-breakpoint(max-width em(615px));
+// $quote-small: new-breakpoint(max-width em(615px));
 
 .highlight {
   @include highlight;
 }
-
-@mixin center-blockquote {
-  @include fill-parent;
-  margin-left: 0 !important;
-  padding: 0;
-  text-align: left !important;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-}
-
 
 q {
   @include serif;
@@ -22,53 +12,6 @@ q {
   margin-bottom: 1.25em;
   margin-top: 1.25em;
   quotes: '\201C''\201D''\2018''\2019';
-
-
-  &.left {
-    margin-right: 0;
-    padding-right: .75em;
-    text-align: left;
-
-    @include media($large) {
-      @include span-columns(5 of 12);
-      @include shift(-2);
-    }
-
-    @include media($medium) {
-      @include span-columns(5 of 12);
-    }
-
-    @include media($quote-small) {
-      margin-left: 0 !important;
-      @include center-blockquote;
-    }
-  }
-
-  &.right {
-    margin-left: 0;
-    padding-left: .75em;
-    text-align: right;
-
-    @include media($large) {
-      @include row($direction: RTL);
-      @include span-columns(5 of 12);
-      @include shift(-2);
-    }
-
-    @include media($medium) {
-      @include row($direction: RTL);
-      @include span-columns(5 of 12);
-    }
-
-    @include media($quote-small) {
-      @include row($direction: LTR);
-      @include center-blockquote;
-    }
-  }
-
-  &.center {
-    @include center-blockquote;
-  }
 
   &:before,
   &:after {
