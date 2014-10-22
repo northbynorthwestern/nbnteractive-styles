@@ -14,8 +14,10 @@ figure {
 
   img {
     @include fill-parent;
+    margin: 0 !important;
   }
 }
+
 
 .img-grid {
   @include span-columns(12 of 12);

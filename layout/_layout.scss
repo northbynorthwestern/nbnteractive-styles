@@ -68,10 +68,7 @@
     }
 
     &.center {
-      @include shift(0);
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
+      @include prose-width;
     }
   }
 
