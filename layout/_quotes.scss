@@ -6,10 +6,11 @@ $quote-small: new-breakpoint(max-width em(700px));
 
 @mixin center-blockquote {
   @include fill-parent;
+  margin-left: 0 !important;
+  padding: 0;
   text-align: left !important;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  margin-left: 0 !important;
 }
 
 
@@ -26,6 +27,7 @@ q {
 
   &.left {
     margin-right: 0;
+    padding-right: .75em;
     text-align: left;
 
     @include media($large) {
@@ -45,7 +47,8 @@ q {
   }
 
   &.right {
-    margin-right: 0;
+    margin-left: 0;
+    padding-left: .75em;
     text-align: right;
 
     @include media($large) {
