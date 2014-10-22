@@ -2,23 +2,27 @@ $bp-footer: new-breakpoint(min-width 768px);
 $footer-height: 75px;
 
 footer {
-  margin-top: 100px;
   background-color: $nbn-purple;
   color: $white;
+  margin-top: 100px;
+  padding-bottom: .5em;
+  padding-top: .5em;
   width: 100%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 
   .credits p {
     font-size: .875em;
-    margin: 0;
     line-height: 1.5em;
+    margin: 0;
   }
 
   .credits a {
     color: $white;
   }
 }
+
+
+// Sticky Footer
+// http://css-tricks.com/snippets/css/sticky-footer/
 
 * {
   margin: 0;
@@ -30,15 +34,17 @@ body {
 }
 
 main {
-  min-height: 100%;
   margin-bottom: -($footer-height);
+  min-height: 100%;
 }
 
 main:after {
-  content: "";
+  content: '';
   display: block;
 }
-footer, .page-wrap:after {
-  /* .push must be the same height as footer */
+
+footer,
+.page-wrap:after {
+  //.push must be the same height as footer
   height: $footer-height;
 }

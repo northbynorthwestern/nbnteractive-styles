@@ -1,10 +1,20 @@
-h1, h2 { @include serif; }
-h3, h4, h5, h6 { @include sans-serif; }
+h1,
+h2 {
+  @include serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @include sans-serif;
+}
 
 .prose {
   @include sans-serif;
+
   p {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
+    margin-bottom: .75em;
+    margin-top: .75em;
   }
 }

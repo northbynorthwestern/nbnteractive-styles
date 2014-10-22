@@ -1,80 +1,89 @@
+$quote-small: new-breakpoint(max-width em(700px));
+
 .highlight {
   @include highlight;
 }
 
-@mixin centerBlockquote {
+@mixin center-blockquote {
   @include fill-parent;
   text-align: left !important;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  margin-left: 0em !important;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin-left: 0 !important;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
 
 
 q {
-  display: block;
   @include serif;
-  quotes: "\201C""\201D""\2018""\2019";
-  font-weight: bold;
+  display: block;
   font-size: 1.2em;
+  font-weight: bold;
+  quotes: '\201C''\201D''\2018''\2019';
+
 
   &.left {
-      margin-right: 0;
-      margin-top: 0;
-      margin-bottom: 1em;
-      text-align: left;
+    margin-bottom: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: left;
 
-      @include media($large) {
-          @include span-columns(4 of 12);
-          @include shift(-1);
-      }
-      @include media($medium) {
-          @include span-columns(3 of 12);
-          @include shift(-1);
-      }
-      @include media($small) {
-          margin-left: 0 !important;
-          @include centerBlockquote;
-      }
+    @include media($large) {
+      @include span-columns(4 of 12);
+      @include shift(-1);
+    }
+
+    @include media($medium) {
+      @include span-columns(3 of 12);
+      @include shift(-1);
+    }
+
+    @include media($quote-small) {
+      margin-left: 0 !important;
+      @include center-blockquote;
+    }
   }
 
   &.right {
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 1em;
-      text-align: right;
+    margin-bottom: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: right;
 
-      @include media($large) {
-          @include row($direction: RTL);
-          @include span-columns(4 of 12);
-          @include shift(-1);
-      }
-      @include media($medium) {
-          @include row($direction: RTL);
-          @include span-columns(3 of 12);
-          @include shift(-1);
-      }
-      @include media($small) {
-          @include row($direction: LTR);
-          @include centerBlockquote;
-      }
+    @include media($large) {
+      @include row($direction: RTL);
+      @include span-columns(4 of 12);
+      @include shift(-1);
+    }
+
+    @include media($medium) {
+      @include row($direction: RTL);
+      @include span-columns(3 of 12);
+      @include shift(-1);
+    }
+
+    @include media($quote-small) {
+      @include row($direction: LTR);
+      @include center-blockquote;
+    }
   }
 
   &.center {
-      @include centerBlockquote;
+    @include center-blockquote;
   }
 
-  &:before, &:after {
-      font-size: 2em;
-      content: none;
+  &:before,
+  &:after {
+    content: none;
+    font-size: 2em;
   }
+
   p {
-      margin: 0;
-      font-size: 1.2em;
-      display: inline;
+    display: inline;
+    font-size: 1.2em;
+    margin: 0;
   }
 }
