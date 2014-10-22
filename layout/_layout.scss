@@ -6,8 +6,8 @@
 
 .row {
   @include row();
-  clear: both;
-  float: none;
+  // clear: both;
+  // float: none;
 }
 
 .content-block {
