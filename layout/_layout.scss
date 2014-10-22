@@ -6,12 +6,11 @@
 
 .row {
   @include row();
-  // clear: both;
-  // float: none;
+  clear: both;
+  float: none;
 }
 
 .content-block {
-  @include row();
 
   @include media($large) {
     @include span-columns(8 of 12);
