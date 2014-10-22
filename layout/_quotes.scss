@@ -1,4 +1,4 @@
-$quote-small: new-breakpoint(max-width em(700px));
+$quote-small: new-breakpoint(max-width em(615px));
 
 .highlight {
   @include highlight;
