@@ -20,11 +20,34 @@
   figure,
   img,
   div {
-    @include fill-parent;
-    &.xl { @include span-columns(12); }
-    &.large { @include span-columns(8); }
-    &.medium { @include span-columns(6); }
-    &.small { @include span-columns(4); }
+
+    .xl { @include span-columns(12); }
+    .large { @include span-columns(8); }
+    .medium { @include span-columns(6); }
+    .small { @include span-columns(4); }
+
+    .xl,
+    .large {
+      @include media($medium) {
+        @include fill-parent;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .medium,
+    .small {
+      @include media($medium) {
+        @include shift(0);
+      }
+    }
+
+    @include media($small) {
+      @include fill-parent();
+      @include span-columns(12 of 12);
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &.left {
       @include shift(-2);
