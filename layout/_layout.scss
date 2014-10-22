@@ -4,6 +4,12 @@
   @include media($large) { padding: 0 1.5em; }
 }
 
+.row {
+  @include row();
+  clear: both;
+  float: none;
+}
+
 .content-block {
   @include row();
 

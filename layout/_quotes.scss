@@ -37,7 +37,6 @@ q {
 
     @include media($medium) {
       @include span-columns(5 of 12);
-      @include shift(-1);
     }
 
     @include media($quote-small) {
@@ -60,7 +59,6 @@ q {
     @include media($medium) {
       @include row($direction: RTL);
       @include span-columns(5 of 12);
-      @include shift(-1);
     }
 
     @include media($quote-small) {
