@@ -1,0 +1,7 @@
+.img-grid {
+  figure {
+    @include span-columns(6);
+
+    .img-grid-two & { @include omega(2n); }
+  }
+}

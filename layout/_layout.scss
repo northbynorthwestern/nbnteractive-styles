@@ -5,6 +5,8 @@
 }
 
 .content-block {
+  @include row();
+
   @include media($large) {
     @include span-columns(8 of 12);
     @include shift(2);
