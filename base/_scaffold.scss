@@ -1,3 +1,7 @@
 .container {
-  @include outer-container;
+  @extend %container;
+}
+
+.row {
+  @extend %row;
 }

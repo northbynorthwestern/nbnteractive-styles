@@ -11,10 +11,15 @@ h6 {
 }
 
 .prose {
+  @extend %prose;
   @include sans-serif;
 
   p {
     margin-bottom: .75em;
     margin-top: .75em;
+  }
+
+  h3 {
+    @extend %paragraph-header;
   }
 }

@@ -1,6 +1,18 @@
 $img-grid-small: new-breakpoint(max-width em(625px));
 
+
+figure {
+  -webkit-margin-end: 0;
+  -webkit-margin-start: 0;
+
+  figcaption {
+    @extend %caption;
+  }
+}
+
 .img-grid {
+  @include span-columns(12 of 12);
+
   margin-bottom: 2em;
   margin-top: 2em;
 
@@ -25,10 +37,6 @@ $img-grid-small: new-breakpoint(max-width em(625px));
 
     img {
       @include fill-parent;
-    }
-
-    figcaption {
-      @extend %caption;
     }
 
     &:nth-of-type(2n) figcaption { text-align: right; }

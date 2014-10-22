@@ -1,6 +1,41 @@
+
+// Grid Stuff
+
+%container {
+  @include outer-container;
+  @include pad(0 1.25em);
+}
+
+%row {
+  @include row();
+  clear: both;
+  float: none;
+}
+
+
+// Prose Styles
+
+%prose {
+  color: $bodytext-black;
+  display: block;
+  font-family: $sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
+
 %caption {
   @include sans-serif;
-
   font-size: .8em;
   font-weight: 300;
+}
+
+%paragraph-header {
+  font-family: $sans-serif;
+  font-size: .875em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  text-transform: uppercase;
 }

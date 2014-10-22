@@ -1,16 +1,7 @@
-.container {
-  @include media($small) { padding: 0 .5em; }
-  @include media($medium) { padding: 0 1em; }
-  @include media($large) { padding: 0 1.5em; }
-}
-
-.row {
-  @include row();
-  clear: both;
-  float: none;
-}
 
 .content-block {
+  margin-bottom: .25em;
+  margin-top: .25em;
 
   @include media($large) {
     @include span-columns(8 of 12);
