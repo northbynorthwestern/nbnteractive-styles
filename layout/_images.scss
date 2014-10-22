@@ -2,13 +2,18 @@ $img-grid-small: new-breakpoint(max-width em(625px));
 
 
 figure {
-  -webkit-margin-end: 0;
-  -webkit-margin-start: 0;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
 
   figcaption {
     @extend %caption;
   }
+
+  img {
+    @include fill-parent;
+  }
 }
+
 
 .img-grid {
   @include span-columns(12 of 12);

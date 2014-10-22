@@ -16,4 +16,30 @@
   @include media($small) {
     @include span-columns(12 of 12);
   }
+
+  figure,
+  img,
+  div {
+    @include fill-parent;
+    &.xl { @include span-columns(12); }
+    &.large { @include span-columns(8); }
+    &.medium { @include span-columns(6); }
+    &.small { @include span-columns(4); }
+
+    &.left {
+      @include shift(-2);
+      margin-right: 2em;
+    }
+
+    &.right {
+      @include row($direction: RTL);
+      @include shift(-2);
+      margin-left: 1.25em;
+    }
+
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

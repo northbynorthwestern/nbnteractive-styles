@@ -22,4 +22,8 @@ h6 {
   h3 {
     @extend %paragraph-header;
   }
+
+  .prose-width {
+    @include fill-parent;
+  }
 }

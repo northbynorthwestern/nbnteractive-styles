@@ -30,8 +30,8 @@ q {
     text-align: left;
 
     @include media($large) {
-      @include span-columns(4 of 12);
-      @include shift(-1);
+      @include span-columns(5 of 12);
+      @include shift(-2);
     }
 
     @include media($medium) {
@@ -51,8 +51,8 @@ q {
 
     @include media($large) {
       @include row($direction: RTL);
-      @include span-columns(4 of 12);
-      @include shift(-1);
+      @include span-columns(5 of 12);
+      @include shift(-2);
     }
 
     @include media($medium) {
