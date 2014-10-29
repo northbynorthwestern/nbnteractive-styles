@@ -12,6 +12,10 @@
   float: none;
 }
 
+%content-block {
+  @include pad(0 1.25em);
+}
+
 
 // Prose Styles
 
