@@ -27,9 +27,11 @@
 
 %caption {
   @include sans-serif;
+  color: $line-gray;
   font-size: .8em;
   font-weight: 300;
   text-align: right;
+
 }
 
 %paragraph-header {
