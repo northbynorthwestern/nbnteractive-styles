@@ -4,8 +4,8 @@
   margin-top: .25em;
 
   @include media($large) {
-    @include span-columns(10 of 12);
-    @include shift(1);
+    @include span-columns(8 of 12);
+    @include shift(2);
   }
 
   @include media($medium) {
