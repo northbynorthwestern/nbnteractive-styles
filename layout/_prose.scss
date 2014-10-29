@@ -23,3 +23,8 @@ h6 {
     @extend %paragraph-header;
   }
 }
+
+.prose-justified {
+  @extend %prose;
+  text-align: justify;
+}
