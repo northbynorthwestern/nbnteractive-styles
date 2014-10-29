@@ -6,12 +6,13 @@ $small: new-breakpoint(max-width em(400px));
 $medium: new-breakpoint(min-width em(400px) max-width em(750px));
 $large: new-breakpoint(min-width em(750px));
 
-// size of lead art banner on apps/explorers
+// Lead-Banner Settings
 $banner-height: 225px;
+$grand-header-image-url: '';
 
+// Font Families
 $sans-serif: "Proxima-Nova", Helvetica, sans-serif;
 $serif: "ff-meta-serif-web-pro", Georgia, serif;
-
 
 // Layout Breakpoints
 $medium-to-small: new-breakpoint(max-width em(650px));
