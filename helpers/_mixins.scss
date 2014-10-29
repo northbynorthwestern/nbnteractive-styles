@@ -1,9 +1,9 @@
 @mixin sans-serif { font-family: $sans-serif; }
 @mixin serif { font-family: $serif; }
 
-@mixin highlight($color: $nbn-red) {
+@mixin highlight($color: $nbn-purple) {
   background-color: $color;
-  box-shadow: -.4em 0 0 $nbn-red, .4em 0 0 $nbn-red;
+  box-shadow: -.4em 0 0 $color, .4em 0 0 $color;
   color: $white;
   line-height: 1.5;
   padding: .25em 0;
