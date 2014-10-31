@@ -4,8 +4,8 @@ $grand-header-image-url: 'http://placekitten.com/1000/800';
 .banner {
   background-color: lighten($black, 15%);
   display: table;
-  // height: 600px;
-  // max-height: $banner-height;
+  height: $banner-height;
+  max-height: 75vh;
   margin: 0 0 1.5em;
   position: relative;
   width: 100%;
