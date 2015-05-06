@@ -4,7 +4,7 @@
   "main": "main.scss",
   "private": true,
   "dependencies": {
-    "bourbon": "~4.0.2",
+    "bourbon": "~4.2.2",
     "neat": "~1.7.0"
   }
 }
